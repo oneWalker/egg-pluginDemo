@@ -1,6 +1,6 @@
 # eggTemplate
 
-
+初始化用于 EMT 的 egg.js 项目模板
 
 ## QuickStart
 
