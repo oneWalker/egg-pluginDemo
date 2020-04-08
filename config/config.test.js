@@ -16,18 +16,11 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1585626894600_7869';
 
   // add your middleware config here
-  config.middleware = [ 'report' ];
+  config.middleware = [];
 
   config.mongoose = {
     client: {
-      url: 'mongodb://127.0.0.1/test',
-      options: {
-        autoIndex: false,
-        reconnectTries: Number.MAX_VALUE,
-        reconnectInterval: 500,
-        poolSize: 10,
-        bufferMaxEntries: 0,
-      },
+      url: 'mongodb://huaxi:541R4evB@mongodb:27017/huaxi',
     },
   };
 
