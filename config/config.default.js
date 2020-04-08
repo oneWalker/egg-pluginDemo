@@ -31,6 +31,33 @@ module.exports = appInfo => {
     },
   };
 
+  //add the redis setting to the world
+  config.redis = {
+    client: {
+      port: 6379,          // Redis port
+      host: 'redis',   // Redis host
+      //password: '',
+      //db: '',
+    },
+  };
+
+  //default security setting
+  config.security= {
+    csrf: {
+      enable: false,
+      //ignoreJson:true
+    },
+    //domainWhiteList: [ 'http://192.168.102.180:8000' ]
+  };
+  
+  //allow Cors
+  config.cors = {
+    //origin:'http://192.168.102.180:8000',
+    origin:()=>'*',
+    credentials: true,
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
