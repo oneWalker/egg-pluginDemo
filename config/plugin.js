@@ -14,11 +14,11 @@ module.exports = {
         enable: true,
         package: 'egg-mongoose',
     },
-    cors:{
+    cors: {
         enable: true,
         package: 'egg-cors',
     },
-    redis:{
+    redis: {
         enable: true,
         package: 'egg-redis',
     },
