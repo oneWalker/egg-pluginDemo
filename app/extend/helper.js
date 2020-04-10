@@ -2,7 +2,7 @@
 
 module.exports = {
     validate(options) {
-    const { body, query, params } = options;
+        const { body, query, params } = options;
         if (body) {
             this.ctx.validate(body);
         }
