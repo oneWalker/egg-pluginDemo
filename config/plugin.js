@@ -1,5 +1,5 @@
 'use strict';
-
+const path = require('path')
 /** @type Egg.EggPlugin */
 module.exports = {
     // had enabled by egg
@@ -14,12 +14,16 @@ module.exports = {
         enable: true,
         package: 'egg-mongoose',
     },
-    cors:{
+    cors: {
         enable: true,
         package: 'egg-cors',
     },
-    redis:{
+    redis: {
         enable: true,
         package: 'egg-redis',
     },
+    pluginDemo: {
+        enable: true,
+        path: path.join('../lib/plugin/pluginDemo')
+    }
 };
