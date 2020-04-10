@@ -19,7 +19,7 @@ class FooController extends Controller {
     async access() {
         const { ctx, logger } = this;
         ctx.helper.validate(Rules.indexRule);
-        const count = await ctx.service.foo.IncrAndReturn(ctx.query.id);
+        const count = await ctx.service.foo.incrAndReturn(ctx.query.id);
         const info = `this is on ${this.app.config.env} environment, request id: ${ctx.query.id}, count: ${count}`;
         logger.info(info);
         ctx.body = {
