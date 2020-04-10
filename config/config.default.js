@@ -24,28 +24,28 @@ module.exports = appInfo => {
     ignore:[`/public`]
   };
 
-//     config.mongoose = {
-//         client: {
-//             url: 'mongodb://127.0.0.1/test',
-//             options: {
-//                 autoIndex: false,
-//                 reconnectTries: Number.MAX_VALUE,
-//                 reconnectInterval: 500,
-//                 poolSize: 10,
-//                 bufferMaxEntries: 0,
-//             },
-//         },
-//     };
+  config.mongoose = {
+    client: {
+      url: 'mongodb://127.0.0.1/test',
+      options: {
+        autoIndex: false,
+        reconnectTries: Number.MAX_VALUE,
+        reconnectInterval: 500,
+        poolSize: 10,
+        bufferMaxEntries: 0,
+      },
+    },
+  };
 
-//   //add the redis setting to the world
-//   config.redis = {
-//     client: {
-//       port: 6379,          // Redis port
-//       host: "127.0.0.1",   // Redis host
-//       password: null,
-//       db: 1,
-//     },
-//   };
+  //add the redis setting to the world
+  config.redis = {
+    client: {
+      port: 6379,          // Redis port
+      host: "127.0.0.1",   // Redis host
+      password: null,
+      db: 1,
+    },
+  };
 
   //default security setting
   config.security= {
