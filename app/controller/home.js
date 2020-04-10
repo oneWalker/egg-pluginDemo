@@ -8,26 +8,26 @@ const Controller = require('egg').Controller;
 // query, body, params 如果存在, 将对对应入参进行校验
 // 这3个选项内具体配置方法参见 parameter 插件: https://github.com/node-modules/parameter
 const Rules = {
-  indexRule: {
-    query: {
-      id: 'id',
+    indexRule: {
+        query: {
+            id: 'id',
+        },
     },
-  },
 };
 
 class HomeController extends Controller {
-  async index() {
-    const { ctx, logger } = this;
-    ctx.helper.validate(Rules.indexRule);
-    const count = await ctx.service.foo.IncrAndReturn(ctx.query.id);
-    const info = `this is on ${this.app.config.env} environment, request id: ${ctx.query.id}, count: ${count}`;
-    logger.info(info);
-    ctx.body = {
-      env: this.app.config.env,
-      id: ctx.query.id,
-      count,
-    };
-  }
+    async index() {
+        const { ctx, logger } = this;
+        ctx.helper.validate(Rules.indexRule);
+        const count = await ctx.service.foo.IncrAndReturn(ctx.query.id);
+        const info = `this is on ${this.app.config.env} environment, request id: ${ctx.query.id}, count: ${count}`;
+        logger.info(info);
+        ctx.body = {
+            env: this.app.config.env,
+            id: ctx.query.id,
+            count
+        }
+    };   
 }
 
 module.exports = HomeController;
