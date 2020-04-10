@@ -15,8 +15,8 @@ const Rules = {
     },
 };
 
-class HomeController extends Controller {
-    async index() {
+class FooController extends Controller {
+    async access() {
         const { ctx, logger } = this;
         ctx.helper.validate(Rules.indexRule);
         const count = await ctx.service.foo.IncrAndReturn(ctx.query.id);
@@ -30,4 +30,4 @@ class HomeController extends Controller {
     };   
 }
 
-module.exports = HomeController;
+module.exports = FooController;
