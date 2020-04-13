@@ -27,7 +27,16 @@ class FooController extends Controller {
             id: ctx.query.id,
             count
         }
-    };   
+    };
+    
+    async pluginDemo()
+    {
+        const { ctx,app} = this;
+        const data1 = await app.testData;
+        const res2 = await app.sendMessage('testMessage');
+        console.log(data1,res2);
+        ctx.body = res2;
+    }
 }
 
 module.exports = FooController;

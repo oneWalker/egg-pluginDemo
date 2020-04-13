@@ -24,6 +24,6 @@ module.exports = {
     },
     pluginDemo: {
         enable: true,
-        path: path.join('../lib/plugin/pluginDemo')
+        path: path.resolve(__dirname,'../lib/plugins/pluginDemo')
     }
 };
