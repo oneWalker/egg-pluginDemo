@@ -25,5 +25,9 @@ module.exports = {
     pluginDemo: {
         enable: true,
         path: path.resolve(__dirname,'../lib/plugins/pluginDemo')
-    }
+    },
+    routerPlus: {
+        enable:true,
+        package:'egg-router-plus'
+    },  
 };
