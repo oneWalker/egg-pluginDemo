@@ -8,6 +8,6 @@ module.exports = app => {
     const apiRouter = router.namespace('/v1/public/');
     apiRouter.get('/foo/access',controller.foo.access);
 
-    //原始写法
-    router.get('/public/foo/plugin', controller.foo.pluginDemo);
+    //原始写法仍然保留
+    //router.get('/public/foo/plugin', controller.foo.pluginDemo);
 };
