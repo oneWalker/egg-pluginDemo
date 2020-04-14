@@ -22,8 +22,8 @@ module.exports = {
         enable: true,
         package: 'egg-redis',
     },
-    pluginDemo: {
-        enable: true,
-        path: path.join('../lib/plugin/pluginDemo')
-    }
+    routerPlus: {
+        enable:true,
+        package:'egg-router-plus'
+    },  
 };
