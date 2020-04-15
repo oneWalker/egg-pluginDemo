@@ -8,6 +8,7 @@ egg-pluginDemo is a demo about how to extend and publish a plugin for egg framew
 [ ] ts support
 [ ] test cases
 ## File introduction
+```js
 |-- egg-pluginDemo
     |-- .autod.conf.js
     |-- .eslintignore
@@ -26,6 +27,7 @@ egg-pluginDemo is a demo about how to extend and publish a plugin for egg framew
     |   |-- config.default.js
     |-- lib    //the main method js file
         |-- pluginDemo.js
+```
 ## Usage
 
 ### install 
