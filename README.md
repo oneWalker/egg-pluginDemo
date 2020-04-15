@@ -2,11 +2,11 @@
 
 egg-pluginDemo is a demo about how to extend and publish a plugin for egg framework
 ## To do list
-[x] the minni demo for extend
-[x] customlize the method to plugin
-[ ] agent.js support
-[ ] ts support
-[ ] test cases
+* [x] the minni demo for extend
+* [x] customlize the method to plugin
+* [ ] agent.js support
+* [ ] ts support
+* [ ] test cases
 ## File introduction
 ```js
 |-- egg-pluginDemo
