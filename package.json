@@ -1,0 +1,50 @@
+{
+  "name": "egg-pluginDemo",
+  "version": "2.4.0",
+  "description": "Redis plugin for egg",
+  "eggPlugin": {
+    "name": "pluginDemo"
+  },
+  "files": [
+    "app.js",
+    "lib",
+    "config"
+  ],
+  "types": "./index.d.ts",
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "mddir": "^1.1.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "type": "travis",
+    "version": "8, 10, 11",
+    "license": true,
+    "services": "redis-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oneWalker/egg-pluginDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oneWalker/egg-pluginDemo/issues"
+  },
+  "homepage": "https://github.com/oneWalker/egg-pluginDemo#readme",
+  "author": "LIU",
+  "license": "MIT"
+}
