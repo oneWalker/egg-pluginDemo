@@ -1,12 +1,15 @@
 # egg-pluginDemo
 ![](https://img.shields.io/badge/LICENSE-MIT-blue.svg)
+
 egg-pluginDemo is a demo about how to extend and publish a plugin for egg framework
+
 ## To do list
 - [x] the minni demo for extend
 - [x] customlize the method to plugin
 - [ ] agent.js support
 - [ ] ts support
 - [ ] test cases
+
 ## File introduction
 ```js
 |-- egg-pluginDemo
