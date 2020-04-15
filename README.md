@@ -32,21 +32,25 @@ egg-pluginDemo is a demo about how to extend and publish a plugin for egg framew
 
 ### install 
 - npm pulished
-npm i egg-pluginDemo --save
+  - npm i egg-pluginDemo --save
 - npm unpublished 
-download the project and copy it into the file catalog
+  - download the project and copy it into the file catalog
 
 ### add to //config/plugin.js
 - npm published
+```js
 pluginDemo:{
     enable: true,
     package: 'egg-pluginDemo',
   },
+```
 - npm unpulished
+```js
 pluginDemo:{
     enable: true,
     path: path.join(__dirname,'/../..'),
   },
+```
 - use it in the controller and service
 ```js
 let res = await this.ctx.pluginDemo.testSend(msg);
