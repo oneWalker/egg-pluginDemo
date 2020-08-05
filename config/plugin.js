@@ -25,5 +25,17 @@ module.exports = {
     routerPlus: {
         enable:true,
         package:'egg-router-plus'
-    },  
+    },
+    io: {
+        enable: true,
+        package: 'egg-socket.io'
+    },
+    bus: {
+        enable: true,
+        package: 'egg-bus'
+    },
+    sequelize:{
+        enbale:true,
+        package:'egg-sequelize'
+    }
 };
