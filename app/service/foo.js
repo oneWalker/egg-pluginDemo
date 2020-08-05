@@ -34,7 +34,7 @@ class FooService extends Service {
         
         //update
         let upCondition = { id:1 }, upSet = {name:"test",password:"test"};
-        await this.ctx.sqlmodel.Foo.update( upSet , { where:upCondition });
+        await this.ctx.sqlModel.Foo.update( upSet , { where:upCondition });
 
         //delete
         let deCondition = {name:"test"}
@@ -49,13 +49,15 @@ class FooService extends Service {
         //select
 
         //transaction 事务
+        //start
+        let tran = await this.ctx.sqlModel.transaction();
         try {
             //start
-            let tran = await this.ctx.sqlModel.transaction();
+            
             //start create transaction
             await this.ctx.sqlModel.Foo.create(createUser,{ transaction:tran});
             //start update transaction
-            await this.ctx.sqlmodel.Foo.update( upSet , { where:upCondition,transaction:tran });
+            await this.ctx.sqlModel.Foo.update( upSet, { where:upCondition,transaction:tran });
             //start delete transaction
             await this.ctx.sqlModel.Foo.destroy( { where:deCondition, transaction:tran});
             await tran.commit();

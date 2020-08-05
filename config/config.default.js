@@ -21,13 +21,13 @@ module.exports = appInfo => {
   config.jwt = {
     enable: true,
     secret: "eggjs", //自己设置的值
-    ignore:[`/public`]
+    ignore:[`/v1/public`]
   };
 
   //定义sequelize的配置文件
   config.sequelize = {
     dialect:'mysql',//支持多个sql类的
-    database:"how2java",
+    database:"test",
     host:"localhost",
     port:3306,
     username:"root",
@@ -35,7 +35,7 @@ module.exports = appInfo => {
     delegate:'sqlModel',//定义挂载到框架上为app.sqlModel
     baseDir:'sqlModel',//定义model文件目录 app/`${sqlModel}`
     define:{ //定义表时的相关的设置，也可在表中单独定义 
-      //timestamps:false,  //是否支持自动生产created_at，updated_at.,deleted_at,自动生成的时间为标准时间
+      timestamps:false,  //是否支持自动生产created_at，updated_at.,deleted_at,自动生成的时间为标准时间
       underscored: true, //是否支持驼峰转为表的下划线
       freezeTableName:true, //不自动将表名转换为复数形式
       //paranoid:false, //删除是否自动插入时间
