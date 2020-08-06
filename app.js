@@ -41,6 +41,9 @@ class AppBootHook {
 
         // 例如：从数据库加载数据到内存缓存
         // this.app.cacheData = await this.app.model.query(QUERY_CACHE_SQL);
+        
+        // 将sequelize中models从model到tables
+        // await this.app.sqlModel.sync();
     }
 
     async didReady() {

@@ -33,7 +33,7 @@ module.exports = appInfo => {
       db: 1,
     },
   };
-
+  
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
