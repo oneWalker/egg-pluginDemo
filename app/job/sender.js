@@ -1,3 +1,5 @@
+'use strict';
+
 const { Job } = require('egg-bus');
 
 class Sender extends Job {
@@ -15,7 +17,7 @@ class Sender extends Job {
      * @param {Object} job Bull原始Job对象
      */
   async run(data, job) {
-
+    console.log('job run', data, job);
   }
 
   /**
@@ -23,7 +25,7 @@ class Sender extends Job {
      * @param {Object} data 事件发送过来的数据
      */
   failed(data) {
-
+    console.log('job failed', data);
   }
 }
 

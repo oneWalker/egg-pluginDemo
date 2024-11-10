@@ -24,16 +24,16 @@ module.exports = appInfo => {
     },
   };
 
-  //add the redis setting to the world
+  // add the redis setting to the world
   config.redis = {
     client: {
-      port: 6379,          // Redis port
-      host: 'redis',   // Redis host
+      port: 6379, // Redis port
+      host: 'redis', // Redis host
       password: null,
       db: 1,
     },
   };
-  
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',

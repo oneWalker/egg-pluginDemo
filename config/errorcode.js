@@ -1,6 +1,6 @@
 'use strict';
 
-//demos for code defines
+// demos for code defines
 module.exports = exports = {
   DEFAULT_ERROR_CODE: {
     code: 599,

@@ -11,9 +11,8 @@ class FooService extends Service {
   }
 
   /**
-     * redis使用例子
-     * await this.app.redis[command];
-     */
+  * @description redis使用例子 await this.app.redis[command];
+  */
   async getValue(key) {
     const str = await this.app.redis.get(key);
     return str;
