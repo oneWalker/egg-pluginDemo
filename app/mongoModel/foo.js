@@ -1,6 +1,5 @@
 'use strict';
 
-// 加载mongoose的Schema模块 default: mongoose.Schema
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;

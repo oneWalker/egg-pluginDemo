@@ -43,6 +43,8 @@ module.exports = appInfo => {
   };
 
   config.mongoose = {
+    baseDir: 'mongoModel', // models in `app/${mongoModel}`, // define the dir of model
+    delegate: 'mongoModel', // load to `app[mongoModel]`
     client: {
       url: 'mongodb://127.0.0.1/test',
       options: {
